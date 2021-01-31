@@ -1,0 +1,28 @@
+{
+  "homepage": "https://tiyamariastanley.github.io/Keeper-App",
+  "name": "keeper-app-part-1-starting",
+  "version": "1.0.0",
+  "description": "Web app built with Node.js, Express, MongoDB, and React",
+  "keywords": [],
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "inspirational-quotes": "^1.0.8",
+    "mongoose": "^5.11.14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiyamariastanley/Keeper-App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tiyamariastanley/Keeper-App/issues"
+  }
+}
