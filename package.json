@@ -25,7 +25,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "Keeper-App -d build",
+    "deploy": "gh-pages -d build",
     "server": "node-env-run server --exec nodemon",
     "dev": "run-p server start"
   },
