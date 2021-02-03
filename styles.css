@@ -25,6 +25,7 @@ header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  font-size: 2em;
 }
 
 footer {
@@ -61,13 +62,12 @@ footer p {
 .note button {
   position: relative;
   float: right;
-  margin-right: 10px;
+  margin-right: 5px;
   color: #f5ba13;
   border: none;
-  width: 36px;
-  height: 36px;
   cursor: pointer;
   outline: none;
+  background-color: white;
 }
 
 form.create-note {
@@ -102,4 +102,8 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+.modalTextArea{
+  resize: both;
 }
