@@ -1,9 +1,9 @@
 import React,{useState} from "react";
 import Fab from '@material-ui/core/Fab';
 import Zoom from '@material-ui/core/Zoom';
+import AddIcon from '@material-ui/icons/Add';
 import axios from 'axios';
 
-import AddIcon from '@material-ui/icons/Add';
 function CreateArea(props) {
   const [inputtext,inputfn] = useState({
     title:"",

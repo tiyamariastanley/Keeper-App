@@ -22,16 +22,27 @@ router.route("/").post(function(req, res) {
       .catch(err => res.status(400).json("Error: " + err));
 });
 
+router.route("/:id").put(function(req, res) {
+  console.log("inside put");
+  List.update(
+        {_id: req.params.id},
+        {title: req.body.title, content: req.body.content},
+        {overwrite: true},
+        function(err){
+          if(err)
+            res.send(err);
+          else
+            res.send("Successfully updated the article");
+        })
+})
+
 router.route("/:id").delete(function(req, res) {
-    console.log("inside delete");
-    console.log(req.params.id);
-    //console.log(List.find(req.params.id));
+  console.log("inside delete");
     List.findByIdAndDelete(req.params.id)
     .then(function(){res.json("successfully deleted");
 
     })
     .catch(err => res.status(400).json("Error: " + err));
-  //console.log(res);
 })
 
 module.exports = router;
