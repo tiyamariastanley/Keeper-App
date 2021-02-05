@@ -1,30 +1,20 @@
 {
-  "name": "keeper-app-part-1-starting",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Web app built with Node.js, Express, MongoDB, and React",
-  "keywords": [],
+  "description": "",
+  "private": true,
   "main": "server.js",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose": "^5.11.14"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tiyamariastanley/Keeper-App.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tiyamariastanley/Keeper-App/issues"
-  },
-  "engines": {
-    "node": "14.15.4"
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15"
   }
 }

@@ -14,14 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client", "build")))
 app.use("/", router);
+//app.use(morgan("tiny"));
 
-mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true ,useUnifiedTopology: true,useFindAndModify: false});
+mongoose.connect("mongodb+srv://tiyamaria:timast96@cluster0.l99fr.mongodb.net/keeperDB",{ useNewUrlParser: true ,useUnifiedTopology: true,useFindAndModify: false});
 mongoose.connection.once("open", function() {
   console.log("Connection with MongoDB was successful");
-});
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 let port = process.env.PORT||5000;
