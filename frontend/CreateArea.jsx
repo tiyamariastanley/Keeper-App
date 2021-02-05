@@ -26,7 +26,7 @@ function CreateArea(props) {
   function addNote(event){
     props.onclick(inputtext);
     if(!inputtext.title || !inputtext.content ) return
-    axios.post("http://localhost:5000",inputtext);
+    axios.post("/",inputtext);
 
     inputfn({
       title:"",

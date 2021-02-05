@@ -9,7 +9,7 @@ function Note(props){
 
   function delNote(event){
     props.delete(props.id);
-    axios.delete(`http://localhost:5000/${props._id}`);
+    axios.delete(`/${props._id}`);
     event.preventDefault();
   }
 

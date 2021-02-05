@@ -22,7 +22,7 @@ function VerticalModal(props) {
 
   function updateNote(event){
     if(!newText.title || !newText.content ) return;
-    axios.put(`http://localhost:5000/${props._id}`,newText);
+    axios.put(`/${props._id}`,newText);
     window.location.reload();
     updateFun({
       title:props.notetitle,

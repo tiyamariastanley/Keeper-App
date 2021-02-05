@@ -14,7 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "frontend", "build")))
 app.use("/", router);
-//app.use(morgan("tiny"));
 
 mongoose.connect("mongodb+srv://tiyamaria:timast96@cluster0.l99fr.mongodb.net/keeperDB",{ useNewUrlParser: true ,useUnifiedTopology: true,useFindAndModify: false});
 mongoose.connection.once("open", function() {

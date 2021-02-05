@@ -18,7 +18,7 @@ function App(){
 
   useEffect(() => {
     console.log("inside useEffect");
-        axios.get(`http://localhost:5000`)
+        axios.get(`/`)
         .then (res => {
             addFun(res.data);
         })
