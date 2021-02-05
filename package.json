@@ -10,6 +10,7 @@
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "dotenv": "^6.2.0",
     "react": "16.8.6",
     "react-bootstrap": "^1.4.3",
     "react-dom": "16.8.6",
@@ -22,14 +23,10 @@
     "typescript": "3.3.3"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"cd backend && nodemon server\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "server": "node-env-run server --exec nodemon",
-    "dev": "run-p server start"
+    "eject": "react-scripts eject"
   },
   "browserslist": [
     ">0.2%",
