@@ -7,6 +7,7 @@ import axios from 'axios';
 
 function App(){
   const [notes,addFun] = useState([]);
+  const [isLoading,load] = useState(true);
 
   function addList(input){
     console.log(input);
@@ -22,9 +23,18 @@ function App(){
         .then (res => {
             addFun(res.data);
         })
+        .then(response => {
+        load(false);
+        console.log("response :", response);
+        })
         .catch(err => {
+            load(false);
             console.log(err);
         })
+        setTimeout(
+        function() {
+         load(false);
+        },3000);
   },[]);
 
   function delList(id){
@@ -39,11 +49,18 @@ function App(){
   return(
     <div>
     <Header></Header>
-    <CreateArea onclick={addList}/>
-    {
-      notes.map((note,index)=>(
-        <Note key={index} _id={note._id} id={index} title={note.title} content={note.content} delete={delList}></Note>))
-    }
+    {isLoading ? (
+          <div>
+            <h1>Loading...</h1>
+          </div>
+        ) : (
+          <div>
+          <CreateArea onclick={addList}/>
+          {
+            notes.map((note,index)=>(
+              <Note key={index} _id={note._id} id={index} title={note.title} content={note.content} delete={delList}></Note>))
+          }
+        </div>)}
     <Footer></Footer>
     </div>
   );
