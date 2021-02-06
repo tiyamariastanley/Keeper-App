@@ -5,7 +5,7 @@ import VerticalModal from "./modal";
 import axios from 'axios';
 
 function Note(props){
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
 
   function delNote(event){
     props.delete(props.id);
