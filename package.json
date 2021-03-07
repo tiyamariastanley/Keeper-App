@@ -30,8 +30,5 @@
   "bugs": {
     "url": "https://github.com/tiyamariastanley/Keeper-App/issues"
   },
-  "homepage": "https://github.com/tiyamariastanley/Keeper-App#readme",
-  "engines": {
-    "node": "14.15.4"
-  }
+  "homepage": "https://github.com/tiyamariastanley/Keeper-App#readme"
 }
