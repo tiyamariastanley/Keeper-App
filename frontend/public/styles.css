@@ -8,7 +8,6 @@ html {
 }
 body {
   background: #eee;
-  padding: 0 16px;
   background-color: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -17,7 +16,7 @@ body {
 header {
   width: 100%;
   background-color: #f5ba13;
-  margin: auto -16px;
+  margin: auto;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -73,7 +72,8 @@ footer p {
 
 form.create-note {
   position: relative;
-  width: 480px;
+  width: auto;
+  max-width: 30rem;
   margin: 30px auto 20px auto;
   background: #fff;
   padding: 15px;
