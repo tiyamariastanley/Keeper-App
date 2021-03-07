@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -13,8 +14,12 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-frontend && npm run build",
     "start": "node server.js",
-    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
+    "frontend": "cd frontend && npm start",
+    "dev": "concurrently -n 'server,client' -c 'green,blue' \"nodemon server.js\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",
@@ -25,6 +30,7 @@
   "bugs": {
     "url": "https://github.com/tiyamariastanley/Keeper-App/issues"
   },
+  "homepage": "https://github.com/tiyamariastanley/Keeper-App#readme",
   "engines": {
     "node": "14.15.4"
   }

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import VerticalModal from "./modal";
@@ -9,7 +9,7 @@ function Note(props){
 
   function delNote(event){
     props.delete(props.id);
-    axios.delete(`/${props._id}`);
+    axios.delete(`/api/${props._id}`);
     event.preventDefault();
   }
 
